@@ -2,14 +2,13 @@ package com.tob.domain.model.demo;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 public class Contract {
 	private Product product;
 	private double revenue;
 	private Date whenSigned;
-	private int id;
+	//private int id;
 	
 	//private RepositoryService repository;
 	
@@ -20,7 +19,7 @@ public class Contract {
 		this.whenSigned = whenSigned;
 	}
 	
-	private List<RevenueRecognition> revenueRecognitions = new ArrayList();
+	private List<RevenueRecognition> revenueRecognitions = new ArrayList<RevenueRecognition>();
 	
 	public double recognizedRevenue(Date asOf){
 		double totalRevenueAsDate = 0;

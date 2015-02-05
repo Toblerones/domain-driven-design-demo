@@ -20,4 +20,8 @@ public class Product {
 	public static Product newXiaoMi(String name){
 		return new Product(name, new CompleteRecognitionStrategy());
 	}
+	
+	void calculateRevenueRecognitions(Contract contract){
+		recognitionStrategy.calculateRevenueRecognitions(contract);
+	}
 }

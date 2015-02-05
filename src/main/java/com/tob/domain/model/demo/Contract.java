@@ -10,6 +10,9 @@ public class Contract {
 	private double revenue;
 	private Date whenSigned;
 	private int id;
+	
+	//private RepositoryService repository;
+	
 	public Contract(Product product, double revenue, Date whenSigned) {
 		super();
 		this.product = product;
@@ -31,10 +34,17 @@ public class Contract {
 	}
 
 	public void addRevenueRecognition(RevenueRecognition revenueRecognition) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
+	}
+	
+	public static Contract readById(Object contractNumber){
+		return null;	
 	}
 
+	public void calculateRecognitions(){
+		product.calculateRevenueRecognitions(this);
+	}
+	
 	public Product getProduct() {
 		return product;
 	}
